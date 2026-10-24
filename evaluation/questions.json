@@ -1,0 +1,63 @@
+
+[
+  {
+    "id": 1,
+    "question": "What is Arshid's educational background?",
+    "expected": "MCA specializing in Artificial Intelligence and Machine Learning from Jain Deemed-to-be University, and BCA from the University of Calicut.",
+    "type": "supported"
+  },
+  {
+    "id": 2,
+    "question": "What programming languages and technologies does Arshid know?",
+    "expected": "Mention only programming languages and technologies documented in cv.md.",
+    "type": "supported"
+  },
+  {
+    "id": 3,
+    "question": "Explain the Vision-Enabled AI-Based Safety and Passenger Monitoring System.",
+    "expected": "Describe the boat passenger monitoring project using documented details.",
+    "type": "supported"
+  },
+  {
+    "id": 4,
+    "question": "What is the MedSched project?",
+    "expected": "Describe the medicine scheduling project using documented details.",
+    "type": "supported"
+  },
+  {
+    "id": 5,
+    "question": "Where did Arshid complete his internships?",
+    "expected": "Name only the internship organizations documented in cv.md.",
+    "type": "supported"
+  },
+  {
+    "id": 6,
+    "question": "Where can I view Arshid's portfolio?",
+    "expected": "Provide the portfolio URL documented in the knowledge files.",
+    "type": "supported"
+  },
+  {
+    "id": 7,
+    "question": "Has Arshid worked at Google?",
+    "expected": "The documents do not provide enough information to confirm Google employment.",
+    "type": "unsupported"
+  },
+  {
+    "id": 8,
+    "question": "How many years of professional experience does Arshid have at Microsoft?",
+    "expected": "The documents do not provide enough information to confirm Microsoft employment or experience.",
+    "type": "unsupported"
+  },
+  {
+    "id": 9,
+    "question": "What is Arshid's favorite restaurant?",
+    "expected": "The documents do not provide enough information to identify a favorite restaurant.",
+    "type": "unsupported"
+  },
+  {
+    "id": 10,
+    "question": "What salary does Arshid currently earn?",
+    "expected": "The documents do not provide enough information to confirm his current salary.",
+    "type": "unsupported"
+  }
+]

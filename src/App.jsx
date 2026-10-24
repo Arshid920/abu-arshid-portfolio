@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -10,6 +11,7 @@ import Education from './components/Education'
 import Resume from './components/Resume'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ChatWidget from './components/ChatWidget'
 
 export default function App() {
   const [theme, setTheme] = useState(
@@ -27,8 +29,17 @@ export default function App() {
 
   return (
     <>
-      <a className="skip-link" href="#about">Skip to content</a>
-      <Navbar theme={theme} onToggleTheme={() => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))} />
+      <a className="skip-link" href="#about">
+        Skip to content
+      </a>
+
+      <Navbar
+        theme={theme}
+        onToggleTheme={() =>
+          setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
+        }
+      />
+
       <main>
         <Hero />
         <About />
@@ -40,7 +51,9 @@ export default function App() {
         <Resume />
         <Contact />
       </main>
+
       <Footer />
+      <ChatWidget />
     </>
   )
 }

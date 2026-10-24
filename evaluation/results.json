@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "question": "What is Arshid's educational background?",
+    "status": "REVIEW",
+    "reason": "Response and sources returned; check factual accuracy manually",
+    "reply": "Abu Arshid completed his Master of Computer Applications (MCA) specializing in Artificial Intelligence and Machine Learning from Jain Deemed-to-be University in 2026. Prior to that, he earned his Bachelor of Computer Applications (BCA) from the University of Calicut in 2024.",
+    "sources": [
+      "faq.md",
+      "cv.md"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "What programming languages and technologies does Arshid know?",
+    "status": "FAIL",
+    "reason": "HTTP 502: {\"error\":\"Gemini could not answer right now. Please try again.\"}"
+  },
+  {
+    "id": 3,
+    "question": "Explain the Vision-Enabled AI-Based Safety and Passenger Monitoring System.",
+    "status": "FAIL",
+    "reason": "HTTP 502: {\"error\":\"Gemini could not answer right now. Please try again.\"}"
+  },
+  {
+    "id": 4,
+    "question": "What is the MedSched project?",
+    "status": "FAIL",
+    "reason": "HTTP 502: {\"error\":\"Gemini could not answer right now. Please try again.\"}"
+  },
+  {
+    "id": 5,
+    "question": "Where did Arshid complete his internships?",
+    "status": "FAIL",
+    "reason": "HTTP 502: {\"error\":\"Gemini could not answer right now. Please try again.\"}"
+  },
+  {
+    "id": 6,
+    "question": "Where can I view Arshid's portfolio?",
+    "status": "FAIL",
+    "reason": "HTTP 502: {\"error\":\"Gemini could not answer right now. Please try again.\"}"
+  },
+  {
+    "id": 7,
+    "question": "Has Arshid worked at Google?",
+    "status": "FAIL",
+    "reason": "HTTP 502: {\"error\":\"Gemini could not answer right now. Please try again.\"}"
+  },
+  {
+    "id": 8,
+    "question": "How many years of professional experience does Arshid have at Microsoft?",
+    "status": "FAIL",
+    "reason": "HTTP 502: {\"error\":\"Gemini could not answer right now. Please try again.\"}"
+  },
+  {
+    "id": 9,
+    "question": "What is Arshid's favorite restaurant?",
+    "status": "FAIL",
+    "reason": "HTTP 502: {\"error\":\"Gemini could not answer right now. Please try again.\"}"
+  },
+  {
+    "id": 10,
+    "question": "What salary does Arshid currently earn?",
+    "status": "FAIL",
+    "reason": "HTTP 502: {\"error\":\"Gemini could not answer right now. Please try again.\"}"
+  }
+]
