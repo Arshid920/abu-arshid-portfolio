@@ -1,4 +1,4 @@
-# Abu Arshid P — Portfolio and Knowledge Chatbot
+# Abu Arshid P ï¿½ Portfolio and Knowledge Chatbot
 
 A React and Vite portfolio featuring a Gemini-powered chatbot that retrieves information from a local knowledge base about my CV, projects, and professional background.
 
@@ -48,14 +48,30 @@ The Vite production build is generated in `dist/`.
 
 ## Knowledge base and retrieval
 
-- `knowledge/` — source documents used by the chatbot
-- `scripts/ingest.js` — generates chunks and embeddings
-- `data/chunks.json` — generated retrieval index
-- `api/chat.js` — chatbot API and retrieval-augmented generation
-- `src/components/ChatWidget.jsx` — chatbot interface
-- `evaluation/` — chatbot evaluation files and results
+- `knowledge/` ï¿½ source documents used by the chatbot
+- `scripts/ingest.js` ï¿½ generates chunks and embeddings
+- `data/chunks.json` ï¿½ generated retrieval index
+- `api/chat.js` ï¿½ chatbot API and retrieval-augmented generation
+- `src/components/ChatWidget.jsx` ï¿½ chatbot interface
+- `evaluation/` ï¿½ chatbot evaluation files and results
 
 Run ingestion again after changing the knowledge documents:
+
+## Retrieval and model choices
+
+- **Embedding model:** `gemini-embedding-001` converts knowledge documents and user questions into embeddings for semantic retrieval.
+- **Chunking:** The ingestion script splits the knowledge documents into smaller chunks and saves the resulting index in `data/chunks.json`.
+- **Retrieval:** The chatbot retrieves the four most relevant chunks and uses them as context for the response.
+- **Answer generation:** The server-side API sends the retrieved context and the user's question to the Gemini model.
+- **Grounding:** The chatbot is intended to answer using the available portfolio documents and avoid inventing unsupported personal or employment details.
+
+## Known limitations and testing status
+
+- Gemini API requests can fail when the available quota is exhausted. The chatbot may temporarily return an error until the quota becomes available again.
+- The evaluation script is provided to test supported questions and questions that should be refused. Run it when the Gemini API is available, then review the actual results.
+- The deployed chatbot and its API configuration must be tested before submission. Do not claim all evaluation tests pass unless the results confirm this.
+
+
 
 ```bash
 npm run ingest
