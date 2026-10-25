@@ -1,4 +1,3 @@
-
 import fs from "node:fs";
 import path from "node:path";
 import { GoogleGenAI } from "@google/genai";
@@ -8,6 +7,18 @@ const indexPath = path.join(root, "data", "chunks.json");
 
 const REFUSAL =
   "The portfolio documents do not provide enough information to confirm that.";
+
+function isUnsupportedEmploymentQuestion(question) {
+  const asksAboutEmployment =
+    /\b(worked|work|working|employed|employment|job|employee|career|hired)\b/i.test(
+      question
+    );
+
+  const mentionsCompany =
+    /\b(google|microsoft|amazon|meta|apple|openai)\b/i.test(question);
+
+  return asksAboutEmployment && mentionsCompany;
+}
 
 function cosineSimilarity(a, b) {
   if (!a?.length || !b?.length || a.length !== b.length) {
@@ -80,17 +91,13 @@ async function fetchWithRetry(url, options, maxAttempts = 3) {
         return response;
       }
 
-      await new Promise((resolve) =>
-        setTimeout(resolve, attempt * 1000)
-      );
+      await new Promise((resolve) => setTimeout(resolve, attempt * 1000));
     } catch (error) {
       if (attempt === maxAttempts) {
         throw error;
       }
 
-      await new Promise((resolve) =>
-        setTimeout(resolve, attempt * 1000)
-      );
+      await new Promise((resolve) => setTimeout(resolve, attempt * 1000));
     }
   }
 
@@ -118,6 +125,15 @@ export default async function handler(req, res) {
     if (question.length > 1000) {
       return res.status(400).json({
         error: "Your question is too long.",
+      });
+    }
+
+    // Refuse unsupported employment claims before calling Gemini.
+    if (isUnsupportedEmploymentQuestion(question)) {
+      return res.status(200).json({
+        reply:
+          "The available portfolio documents do not confirm that Arshid has worked at that company.",
+        sources: [],
       });
     }
 
