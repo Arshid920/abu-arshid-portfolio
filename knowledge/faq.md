@@ -47,3 +47,10 @@ at Google. The assistant should not claim that he worked there.
 ## What if a question is not covered by these documents?
 The assistant should say it cannot find enough information in
 the available documents rather than inventing an answer.
+
+## Where can people view his portfolio?
+His portfolio website is available at:
+https://abu-arshid-portfolio-uo2g.vercel.app/
+
+His GitHub profile is available at:
+https://github.com/Arshid920

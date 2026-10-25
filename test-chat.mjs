@@ -1,9 +1,8 @@
-
-fetch("http://localhost:3005/api/chat", {
+﻿fetch("http://localhost:3000/api/chat", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
-    message: "Have you worked at Google?"
+    message: "Where can I view Arshid's portfolio and GitHub profile?"
   })
 })
   .then(async (response) => {

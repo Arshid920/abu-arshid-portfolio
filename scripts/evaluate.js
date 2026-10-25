@@ -1,10 +1,10 @@
-
+﻿
 import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
 const questionsFile = path.join(root, "evaluation", "questions.json");
-const endpoint = "http://localhost:3005/api/chat";
+const endpoint = "http://localhost:3000/api/chat";
 
 if (!fs.existsSync(questionsFile)) {
   console.error("Missing evaluation/questions.json");
